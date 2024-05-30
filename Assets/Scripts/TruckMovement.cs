@@ -5,12 +5,13 @@ public enum StateTruck
 {
     IsWorking,
     End,
+    Error,
 }
 
 public class TruckMovement : MonoBehaviour
 {
     private NavMeshAgent agent; // Компонент NavMeshAgent
-    public StateTruck state = StateTruck.End;
+    public StateTruck state;
     public Vector3 target;
 
     void Start()
